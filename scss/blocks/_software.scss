@@ -1,0 +1,103 @@
+@use "../variable" as v;
+@use "../genearal" as g;
+@use "../mixins" as m;
+
+.software {
+    padding-top: 200px;
+    padding-bottom: 80px;
+}
+.software__title-wrapper {
+    max-width: 330px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.software__title {
+    @include m.text (center, 30px, 700, 42px, -0.36px);
+    color: v.$heading-color;
+}
+.software__desc {
+    @include m.text (center, 12px, 400, normal, 0.16px);
+    color: v.$text-color;
+    margin-bottom: 30px;
+}
+.software__img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 33px;
+}
+.software__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px
+}
+.software__item {
+    max-width: 405px;
+    padding: 20px 16px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+.software__item-title {
+    @include m.text (center, 28px, 700, 120%, -0.32px);
+    color: v.$heading-color;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+.software__item-desc-wrapper {
+    max-width: 343px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.software__item-desc {
+    @include m.text (center, 12px, 400, normal, 0.16px);
+    color: v.$text-color;
+}
+.software__item-link {
+    @include m.text (center, 16px, 500, 155%, 0.32px);
+    display: block;
+    color: v.$link-color;
+    transition: 0.3s ease-in-out;
+}
+.software__item:hover {
+    background-color: v.$testi-item-bg-color;
+    
+}
+.software__item:hover .software__item-link {
+    color: v.$readmore-link;
+}
+
+
+// media 375 
+@media only screen and (min-width: 375px) {
+    .software__img {
+        width: auto;
+        margin: 0 auto;
+    }
+    .sofware__list {
+        @include m.flexbox (flex, center, center);
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .sofware__list {
+        @include m.flexbox (flex, center, center);
+        flex-direction: row;
+        column-gap: 32px;
+    }
+    .software__item {
+        padding: 24px;
+    }
+    .software__title-wrapper {
+            max-width: 575px;
+            width: 100%;
+    }
+    .software__title {
+        @include m.text (center, 48px, 700, 120%, -0.48px);
+    }
+    .software__desc {
+        max-width: 357px;
+        margin: 0 auto;
+    }
+}

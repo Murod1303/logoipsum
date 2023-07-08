@@ -1,0 +1,37 @@
+// $bg-color: #000 ;
+:root {
+    --main-bg-color : #fff;
+    --main-desc-color: #3d3a41;
+    --main-title-color: #211f25;
+    --link-color : #211f25;
+    --readmore-link : #ff007a;
+    --testi-item-bg-color : #f7f5ff;
+    --link-bg-br-color : #ff007a;
+    --free-trial-bg-color : #6b50ff;
+    --footer-bg-color: #211f25;
+    --main-white-color: #fff ;
+    --main-ham-bg-color : #7e35eb;
+    --main-li-bg-color: #fcfbff;
+    --main-tit-color: #211f25;
+    --testi-bg-color: #fff;
+    --readmore-color-for-l: #fff;
+}
+
+
+$bg-color: var(--main-bg-color) ;
+$text-color : var(--main-desc-color);
+$link-color:  var(--link-color);
+$heading-color: var(--main-title-color);
+$readmore-link :  var(--readmore-link);
+$testi-item-bg-color : var(--testi-item-bg-color);
+$link-bg-br-color: var(--link-bg-br-color);
+$free-trial-bg-color: var(--free-trial-bg-color);
+$footer-bg-color : var(--footer-bg-color);
+$main-white-color: var(--main-white-color);
+$main-ham-bg-color : var(--main-ham-bg-color);
+$main-li-bg-color: var(--main-li-bg-color);
+$main-tit-color : var(--main-tit-color);
+$testi-bg-color: var(--testi-bg-color);
+$readmore-color-for-l: var(--readmore-color-for-l);
+
+

@@ -1,0 +1,118 @@
+@use "../variable" as v;
+@use "../genearal" as g;
+@use "../mixins" as m;
+
+.pricing {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.pricing__title-wrapper {
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.pricing__title {
+    @include m.text (center, 36px, 700, 34px, 0.32);
+    margin-bottom: 16px;
+    color: v.$heading-color;
+}
+.pricing__desc {
+    @include m.text (center, 13px, 400, normal,null);
+    color: v.$text-color;
+}
+
+.pricing__list {
+    @include m.flexbox (flex, stretch, center);
+    flex-wrap: wrap;
+    gap: 32px 30px;
+}
+.pricing__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 31.22px;
+    max-width: 333px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: v.$bg-color;
+    border: 1px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+.pricing__item-wrapper {
+    margin: 0 auto;
+}
+.pricing__item-title {
+    @include m.text (center, 20px, 500, 150%, -0.2px);
+    margin: 0 auto;
+    margin-bottom: 8px;
+    color: v.$heading-color;
+}
+.pricing__price {
+    @include m.text (center, 24px, 800, 150%, -0.2px);
+    display: block;
+    color: v.$heading-color;
+}
+.pricing__year {
+    @include m.text (center, 16px, 400, 155%, 0.32px);
+    display: block;
+    color: v.$text-color;
+}
+.pricing__sub-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.pricing__sub-item {
+    @include m.text (left, 16px, 400, 155%, 0.32px);
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    color: v.$text-color;
+}
+.pricing__sub-item::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    background-image: url(../../images/general/check.svg);
+}
+.pricing__link {
+    @include m.linkstyle (280px, 16px, transparent, 32px, 1px solid v.$readmore-link);
+    @include m.text (center, 15px, 400, 150%, null);
+    display: block;
+    margin: 0 auto;
+    color: v.$readmore-link;
+}
+
+.pricing__item:hover {
+    border: 1px solid v.$readmore-link;
+}
+.pricing__item:hover .pricing__link {
+    background-color: v.$readmore-link;
+    color: v.$readmore-color-for-l;
+}
+
+// media 
+
+@media only screen and (min-width: 375px ) {
+    .pricing__price {
+        font-size: 28px;
+    }
+    .pricing__link {
+        max-width: 324px;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .pricing {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .pricing__title-wrapper {
+        margin-bottom: 80px;
+    }
+    .pricing__item{
+        max-width: 405px;
+        padding: 31.22px;
+    }
+}

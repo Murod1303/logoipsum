@@ -1,0 +1,35 @@
+
+
+@mixin flexbox ($flex, $center, $space) {
+    display: $flex;
+    align-items: $center;
+    justify-content: $space;
+}
+@mixin before-after ($width, $height) {
+    content: "";
+    width: $width;
+    height: $height;
+    display: inline-block;
+}
+@mixin text ($tac, $fz, $fw, $lineh, $letspac) {
+    text-align: $tac;
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lineh;
+    letter-spacing: $letspac;
+}
+@mixin linkstyle ($wd, $pd, $lbgc, $brr, $br) {
+    width: $wd;
+    padding: $pd;
+    background-color: $lbgc;
+    border-radius: $brr;
+    border: $br;
+}
+@mixin input ($wd, $pd) {
+    display: inline-block;
+    width: $wd;
+    padding: $pd;
+    border-radius: 32px;
+    background-color:  #fff;
+    outline: var(--link-bg-br-color);
+}

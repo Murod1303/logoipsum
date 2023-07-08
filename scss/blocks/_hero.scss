@@ -1,0 +1,125 @@
+@use "../variable" as v;
+@use "../genearal" as g;
+@use "../mixins" as m;
+
+// hero started 
+
+.hero {
+    padding-top: 40px;
+}
+.hero__title-wrapper {
+    max-width: 342px;
+    margin: 0 auto;
+}
+.hero__title {
+    @include m.text (center, 32px, 800, 42px, -0.36px);
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+.hero__desc-wrapper {
+    max-width: 322px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+.hero__desc {
+    @include m.text (center, 12px, 400, normal, 0.16px);
+    color: #fff
+}
+.hero__link {
+    margin: 0 auto;
+}
+.hero__link--watch {
+    @include m.linkstyle (250px, 16px, transparent, 32px, 1px solid #fff);
+    @include m.text (center, 16px, 600, 155%, 0.16px);
+    position: relative;
+    color: #fff;
+    display: block;
+    margin-bottom: 80px;
+}
+.hero__link--watch::after {
+    @include m.before-after (36px, 36px) ;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-image: url(../../images/general/playafter.svg);
+    background-repeat: no-repeat;
+}
+.hero__link--pink {
+    @include m.linkstyle (250px, 16px, v.$link-bg-br-color, 32px, 1px solid v.$link-bg-br-color);
+    @include m.text (center, 16px, 600, 155%, 0.16px);
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+.hero__pic {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+// media 375 
+
+@media only screen and (min-width: 375px) {
+    .hero__title {
+        font-size: 36px;
+    }
+    .hero__desc {
+        font-size: 16px;
+    }
+    .hero__link{
+        max-width: 286px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .hero__title-wrapper {
+        max-width: 500px;
+        margin-bottom: 10px;
+    }
+    .hero__title {
+        font-size: 44px;
+        line-height: 45px;
+    }
+    .hero__desc-wrapper {
+        max-width: 332px;
+    }
+    .hero__desc {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .hero__link{
+        max-width: 286px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .hero__title-wrapper {
+        max-width: 737px;
+        margin-bottom: 24px;
+    }
+    .hero__title {
+        @include m.text (center, 56px, 800, 120%, -0.56px)
+    }
+    .hero__desc-wrapper {
+        max-width: 471px;
+    }
+    .hero__desc {
+        @include m.text (center, 18px, 500, 155%, 0.18px)
+    }
+    .hero__links-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        column-gap: 33px;
+    }
+    .hero__link--pink {
+        margin: 0;
+    }
+    .hero__link--watch {
+        margin: 0;
+    }
+}

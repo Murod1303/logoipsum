@@ -1,0 +1,112 @@
+@use "../variable" as v;
+@use "../genearal" as g;
+@use "../mixins" as m;
+
+.news {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.news__title {
+    @include m.text (center, 36px,700, normal, -0.36px); 
+    color: v.$heading-color;
+}
+.news__desc {
+    @include m.text (center, 17.77px, 400, normal, null);
+    color: v.$text-color; 
+}
+.news__link {
+    display: none;
+}
+
+.news__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 32px;
+}
+.news__item {
+    max-width: 343px;
+    margin: 0 auto;
+}
+.news__content-wrapper {
+    padding: 23.4px;
+}
+.news__sc-time {
+    margin-bottom: 15px;
+}
+.news__sc {
+    @include m.text (null, 13px, 600, 150%, null);
+    max-width: 94px;
+    padding: 3px 7px;
+    background-color: v.$testi-item-bg-color;
+    color: v.$heading-color;
+    margin-right: 15px;
+}
+.news__time {
+    @include m.text (null, 13px, 600, 150%, null);
+    color: v.$text-color;
+    border: 8px
+}
+.news__item-title {
+    @include m.text (null, 23px, 600, 140%, null);  
+    color: v.$heading-color;
+    margin-bottom: 7px;
+}
+.news__item-desc {
+    @include m.text(null, 15px, 400, 150%, null);
+    margin-bottom: 31px;
+    color: v.$text-color;
+    font-family: "Roboto", sans-serif;
+}
+.news__item-link {
+    @include m.text (null, 15px, 400, 150%, null);
+    color: v.$readmore-link;
+    display: flex;
+    align-items: center;
+}
+.news__item-link::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-image: url(../../images/general/arrow.svg);
+    color: v.$readmore-link;
+}
+.news__item:hover {
+    background-color: v.$testi-item-bg-color;
+}
+.news__img {
+    width: 405px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 700px) {
+    .news {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .news__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    .news__title {
+        font-size: 48px;
+        letter-spacing: -0.48px;
+        text-align: left;
+    }
+    .news__link {
+        display: block;
+        @include m.text (center, 15px, 400, 150%, null);
+        @include m.linkstyle (null, 16px 28px, transparent, 32px, 1px solid  v.$readmore-link );
+        max-width: 115px;
+        color: v.$readmore-link;
+    }
+    .news__link:hover {
+        background-color: v.$readmore-link;
+        color: v.$readmore-color-for-l;
+        border: 1px solid  v.$readmore-link;
+    }
+}

@@ -1,0 +1,126 @@
+@use "../variable" as v;
+@use "../genearal" as g;
+@use "../mixins" as m;
+
+.customers {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+.customers__big-wrapper {
+    max-width: 1400px;
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    // padding: 0 20px;
+}
+.customers__title {
+    @include m.text (center, 36px, 700, 36px, -0.336);
+    margin: 0 auto;
+    margin-bottom: 16px;
+    color: v.$main-tit-color;
+}
+.customers__desc {
+    @include m.text (center, 16px, 400, normal, null);
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: v.$text-color;
+}
+.customers__list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 380px;
+}
+.customers__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px !important;   
+    padding: 31px;
+    border-radius: 8px; 
+    background-color: v.$testi-item-bg-color;
+}
+.customers__item:not(:last-child) {
+    margin-right: 32px;
+}
+.customers__item::before {
+    content: "";
+    width: 111px;
+    height: 18px;
+    display: block;
+    margin-bottom: 31px;
+    background-image: url(../../images/general/stars.png);
+    background-repeat: no-repeat;
+}
+.customers__item-desc-wrapper {
+    max-width: 259px;
+    width: 100%;
+}
+.customers__item-desc {
+    @include m.text (left  , 16px, 400, 155%, 0.32px);
+    margin-bottom: 31px;
+    color: v.$heading-color;
+}
+.customers__person {
+    display: flex;
+    align-items: center;
+}
+.customers__person--frs::before {
+    content:  "";
+    width: 53.7px;
+    height: 53.7px;
+    display: inline-block;
+    margin-right: 15.36px;
+    background-image: url(../../images/testi/frst.png);
+    background-repeat: no-repeat;
+}
+.customers__person--sec::before {
+    content:  "";
+    width: 53.7px;
+    height: 53.7px;
+    display: inline-block;
+    margin-right: 15.36px;
+    background-image: url(../../images/testi/scnd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.customers__person--thr::before {
+    content:  "";
+    width: 53.7px;
+    height: 53.7px;
+    display: inline-block;
+    margin-right: 15.36px;
+    background-image: url(../../images/testi/thrd.png);
+    background-repeat: no-repeat;
+}
+.customers__person-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.customers__person-name {
+    @include m.text (left  , 20px, 500, 150%, -0.2px);
+    color: v.$text-color;
+    font-family: "Roboto", san-serif;
+}
+.customers__person-loc {
+    @include m.text (left  , 12px, 400, 150%, null);
+    // width: 166px;
+    color: v.$text-color;
+    font-family: "Roboto", san-serif;
+}
+
+@media only screen and (min-width: 616px) {
+    .customers__desc {
+        margin-bottom: 80px;
+    }
+    .customers__item {
+        width: 350px !important;
+    }
+    .customers__list {
+        height: 319px;
+    }
+    .customers__item-desc-wrapper {
+        max-width: 335px;
+        width: 100%;
+    }
+}

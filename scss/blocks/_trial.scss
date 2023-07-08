@@ -1,0 +1,95 @@
+@use "../variable" as v;
+@use "../genearal" as g;
+@use "../mixins" as m;
+
+.trial {
+    padding-top: 83px;
+    padding-bottom: 83px;
+    background: v.$free-trial-bg-color;
+}
+.trial__wrapper {
+    max-width: 328px;
+    margin: 0 auto;
+}
+
+.trial__title {
+    @include m.text (center, 38px, 700, 120%, -0.38px);
+    color: #fff;
+    margin-bottom: 10px;
+}
+.trial__desc {
+    @include m.text (center, 18px, 400, 150%, null);
+    color: #fff;
+    margin-bottom: 10px;
+}
+.trial__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+.trial__input {
+    @include m.input (200px, 16px) ;
+    display: block;
+    border-radius: 32px;
+    border: none;
+}
+.trial__btn {
+    width: 91px;
+    display: block;
+    padding: 16px 8px;
+    background-color: v.$readmore-link;
+    color: v.$readmore-color-for-l;
+    @include m.text (center, 13px, 400, 140%, null);
+    font-family: "Roboto", sans-serif;
+    border-radius: 32px;
+    border: none;
+}
+.trial__decs-wrapper {
+    max-width: 341px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.trial__desc-bot {
+    @include m.text (center, 12px, 400, 150%, null);
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+.trial__desc-und {
+    text-decoration: underline;
+}
+
+// media 
+
+
+@media only screen and (min-width: 700px) {
+    .trail {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+    .trail__wrapper {
+        max-width: 1000px;
+        width: 100%;
+    }
+    .trial__title{
+        margin-bottom: 24px;
+        font-size: 48px;
+    }
+    .trial__desc {
+        margin-bottom: 44px;
+    }
+    .trial__form {
+        column-gap: 16px;
+        margin-bottom: 16px;
+    }
+    .trial__input {
+        max-width: 242px;
+        width: 100%;
+    }
+    .trial__btn {
+        font-size: 15px;
+        // line-height: 150%;   
+    }
+}

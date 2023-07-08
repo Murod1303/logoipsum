@@ -1,0 +1,60 @@
+@use "variable" as v;
+@use "mixins" as m;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Nunito", sans-serif;
+    background-color: v.$bg-color;
+}
+main {
+    flex-grow: 1;
+}
+img {
+    display: inline-block;
+    height: auto;
+}
+
+.dark-theme {
+    --main-bg-color : #000;
+    --main-desc-color: #d6d6d6;
+    --main-title-color: #fff;
+    --link-color : #fff;
+    --readmore-link : #ff94c7;
+    --testi-item-bg-color : #555;
+    --link-bg-br-color : #ff94c7;
+    --free-trial-bg-color : linear-gradient(35deg, #1a1822 0%, #9040e3 100%), #6b50ff;
+    --footer-bg-color: #211f25;
+    --main-white-color: #fff ;
+    --main-ham-bg-color : #1a1823;
+    --main-li-bg-color : #211f25;
+    --main-tit-color : #fff;
+    --testi-bg-color : #211f25 ;
+    --readmore-color-for-l: #000;
+}
+
+$bg-color: var(--main-bg-color) ;
+$text-color: var(--main-desc-color);
+$link-color: var(--link-color) ;
+$heading-color: var(--main-title-color) ;
+$readmore-link : var(--readmore-link) ;
+$testi-item-bg-color : var(--testi-item-bg-color);
+$link-bg-br-color : var(--link-bg-br-color);
+$free-trial-bg-color: var(--free-trial-bg-color);
+$footer-bg-color : var(--footer-bg-color);
+$main-white-color: var(--footer-bg-color);
+$main-ham-bg-color : var(--main-ham-bg-color);
+$main-li-bg-color : var(--main-li-bg-color);
+$main-tit-color : var(--main-tit-color);
+$testi-bg-color: var(--testi-bg-color); 
+$readmore-color-for-l: var(--readmore-color-for-l);  
