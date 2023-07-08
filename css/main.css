@@ -1197,6 +1197,7 @@ img {
   .software__title-wrapper {
     max-width: 575px;
     width: 100%;
+    margin-bottom: 80px;
   }
   .software__title {
     text-align: center;

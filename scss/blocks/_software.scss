@@ -92,6 +92,7 @@
     .software__title-wrapper {
             max-width: 575px;
             width: 100%;
+            margin-bottom: 80px;
     }
     .software__title {
         @include m.text (center, 48px, 700, 120%, -0.48px);
