@@ -1173,7 +1173,7 @@ img {
   }
 }
 @media only screen and (min-width: 700px) {
-  .sofware__list {
+  .software__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
